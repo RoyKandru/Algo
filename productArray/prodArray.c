@@ -12,30 +12,30 @@ Space Complexity: O(n)
 void productArr(int arr[], int len)
 {
 	int prod[len];
-	int temp=1;
+	int left=1, right=1, i=0;
 
 	printf("i/p: ");
-	for(int i=0;i<len;i++)
+	for(i=0;i<len;i++)
         {
                 printf("  %d", arr[i]);
         }
         printf("\n");
 
-	for(int i=0;i<len;i++)
+	for(i=0;i<len;i++)
 	{
-		prod[i] = temp;
-		temp = temp * arr[i];
+		prod[i] = left;
+		left  = left * arr[i];
 	}
 	
-	temp =1;
-	for(int i=len-1;i>=0;i--)
+	right =1;
+	for(i=len-1;i>=0;i--)
 	{
-		prod[i] = prod[i]*temp;
-		temp = temp * arr[i];	
+		prod[i] = prod[i] * right;
+		right = right * arr[i];	
 	}
 
 	printf("o/p: ");
-	for(int i=0;i<len;i++)
+	for(i=0;i<len;i++)
         {
                 printf("%d ", prod[i]);
         }
