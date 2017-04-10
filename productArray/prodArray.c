@@ -1,5 +1,10 @@
-//i/p : 3 2 4 5 3
-//0/p : 120 180 90 72 120 
+/*
+i/p : 3 2 4 5 3
+o/p : 120 180 90 72 120 
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
 
 #include<stdio.h>
 #include<string.h>
