@@ -15,28 +15,21 @@ void productArr(int arr[], int len)
 	int left=1, right=1, i=0;
 
 	printf("i/p: ");
-	for(i=0;i<len;i++)
-        {
+	for(i=0;i<len;i++){
                 printf("  %d", arr[i]);
         }
         printf("\n");
-
-	for(i=0;i<len;i++)
-	{
+	for(i=0;i<len;i++){
 		prod[i] = left;
 		left  = left * arr[i];
 	}
-	
 	right =1;
-	for(i=len-1;i>=0;i--)
-	{
+	for(i=len-1;i>=0;i--){
 		prod[i] = prod[i] * right;
 		right = right * arr[i];	
 	}
-
 	printf("o/p: ");
-	for(i=0;i<len;i++)
-        {
+	for(i=0;i<len;i++){
                 printf("%d ", prod[i]);
         }
 	printf("\n");
